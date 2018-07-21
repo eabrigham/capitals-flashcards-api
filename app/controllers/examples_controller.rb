@@ -20,6 +20,7 @@ class ExamplesController < OpenReadController
   # POST /examples
   # POST /examples.json
   def create
+    binding.pry
     @example = current_user.examples.build(example_params)
 
     if @example.save

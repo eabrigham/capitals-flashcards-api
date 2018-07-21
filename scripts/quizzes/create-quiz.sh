@@ -11,9 +11,10 @@ curl "http://localhost:4741/quizzes" \
       "state": "'"${STATE}"'",
       "prior_interval": "'"${PRIOR_INTERVAL}"'",
       "next_day_test": "'"${NEXT_DAY_TEST}"'",
-      "user_id": "'"${USER_ID}"'",
+
       "card_id": "'"${CARD_ID}"'"
     }
   }'
 
 echo
+#      "user_id": "'"${USER_ID}"'",
