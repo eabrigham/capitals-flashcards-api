@@ -1,10 +1,10 @@
 require 'pry'
-class QuizzesController < OpenReadController
+class QuizzesController < ProtectedController
   before_action :set_quiz, only: %i[show, update, destroy]
 
   # GET /quizzes
   def index
-    @quizzes = Quiz.all
+    @quizzes = current_user.quizzes
 
     render json: @quizzes
   end
