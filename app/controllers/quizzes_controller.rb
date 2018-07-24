@@ -1,6 +1,6 @@
-require 'pry'
+
 class QuizzesController < ProtectedController
-  before_action :set_quiz, only: %i[show, update, destroy]
+  before_action :set_quiz, only: %i[show update destroy]
 
   # GET /quizzes
   def index
@@ -47,6 +47,7 @@ class QuizzesController < ProtectedController
 
     # Only allow a trusted parameter "white list" through.
     def quiz_params
-      params.require(:quiz).permit(:state, :prior_interval, :next_test_day, :user_id, :card_id)
+      params.require(:quiz).permit(:state, :prior_interval, :next_test_day, :consecutive_correct, :user_id, :card_id)
+      # needed to permit :consecutive_correct after adding column (generate controller doesn't do it)
     end
 end
