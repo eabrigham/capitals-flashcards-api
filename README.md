@@ -1,6 +1,8 @@
 
 The API for an app to store flashcards built in Ruby on Rails.
 
+See the client at: https://github.com/eabrigham/capitals-flashcards-client/
+
 Tables:
 User: email (string), password (string)
 Quiz: consecutive_correct (integer)
